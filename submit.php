@@ -1,6 +1,6 @@
 <?php
-$servername = "localhost:3306";
-$username = "designto_1";
+$servername = "srv-db-pgsql01.ps.kz:5432";
+$username = "designto_22";
 $password = Kimxan110784;
 $dbname = "designto_db";
 
