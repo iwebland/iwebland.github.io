@@ -1,4 +1,11 @@
 @media only screen and (max-width: 575.98px) {
+    
+    .header {
+        padding-top: 0 !important;
+    }
+    .nav__list-item:last-child a {
+        font-size: 0.6rem !important;
+    }
     .case__img-item {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr 50px !important;
