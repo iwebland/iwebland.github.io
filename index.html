@@ -41,7 +41,7 @@
                         <li class="nav__list-item"><a href="#case">Кейсы</a></li>
                         <li class="nav__list-item"><a href="#service">Услуги</a></li>
                         <li class="nav__list-item"><a href="#about">Обо мне</a></li>
-                        <li class="nav__list-item"><a href="" class="cta_btn">Связаться со мной</a></li>
+                        <li class="nav__list-item"><a href="" class="cta_btn showModal">Связаться со мной</a></li>
                     </ul>
                 </nav>
             </div>
@@ -284,7 +284,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость дизайна?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
                     </div>
                     <div class="service__item">
@@ -299,7 +299,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость разработки?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
 
                     </div>
@@ -315,7 +315,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость e-commerce?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
 
                     </div>
@@ -331,7 +331,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость поддержки?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
 
                     </div>
@@ -347,7 +347,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость рекламы?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
 
                     </div>
@@ -363,7 +363,7 @@
                         </div>
                         <div class="service__item-cta">
                             <div class="service__item-cta-quest">Хотите узнать стоимость продвижения?</div>
-                            <div class="service__item-cta-btn cta_btn">хочу Узнать</div>
+                            <div class="service__item-cta-btn cta_btn showModal">хочу Узнать</div>
                         </div>
 
                     </div>
@@ -395,7 +395,7 @@
                         
                         <p>Если вам нужен надежный и креативный партнер для вашего следующего проекта, не стесняйтесь связаться со мной. Я всегда открыт для новых интересных проектов и готов обсудить ваши идеи!</p>
                 </div>
-                <div class="about__cta cta_btn">Связаться со мной</div>
+                <div class="about__cta cta_btn showModal">Связаться со мной</div>
             </div>
         </div>
     </section>
@@ -405,6 +405,7 @@
             <div class="modal__form">
                 <h2 class="modal__form-title">Заполните форму</h2>
                 <form id="myForm" class="formCta">
+                    <div class="closeModal"></div>
                     <div class="inputWrapper">
                         <!-- <label for="name" class="formCta__label-name">Имя:</label> -->
                         <input type="text" id="name" name="name" required class="formCta__input-name" placeholder="Введите имя">
@@ -432,6 +433,7 @@
 
                     <input type="submit" value="Отправить" class="cta_btn submitBtn">
                 </form>
+                <div class="success">Спасибо, Ваша заявка отправлена! Скоро Вас наберу! :)</div>
             </div>
         </div>
     </footer>

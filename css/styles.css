@@ -2,56 +2,44 @@
     font-family: 'Inter';
     src: url('../fonts/Inter-Regular.woff2') format('woff2');
     font-weight: 400; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/Inter-Medium.woff2') format('woff2');
     font-weight: 500; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Light.woff2') format('woff2');
     font-weight: 300; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Medium.ttf') format('woff2');
     font-weight: 500; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.woff2') format('woff2');
     font-weight: 400; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
     font-weight: 600; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Black.woff2') format('woff2');
     font-weight: 900; /* Обычный вес шрифта */
-    font-style: normal; /* Обычный стиль шрифта */
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
-input[type="text"] {
-    font-family: inherit; /* 1 */
-    font-size: inherit; /* 1 */
-    line-height: inherit; /* 1 */
-    margin: 0; /* 2 */
-}
+
 html {
     font-size: 16px;
     color: #eee;
@@ -566,12 +554,16 @@ section, header, footer, main {
     cursor: pointer;
 }
 .modal {
-    position: absolute;
+    position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 200;
+    display: none;
+}
+.modal.modalOpen {
+    display: block;
 }
 .modal__form {
     position: absolute;
@@ -588,7 +580,17 @@ section, header, footer, main {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    padding: 40px 20px;
+    padding: 40px 20px 20px 20px;
+    position: relative;
+}
+.closeModal {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: url(../icons/close.png) center center/cover no-repeat;
 }
 .modal__form-title {
     font-size: 1.5rem;
@@ -617,8 +619,6 @@ section, header, footer, main {
     gap: 5px;
 }
 
-.formCta__label-name {
-}
 
 ::placeholder {
     color: #999;
@@ -639,8 +639,6 @@ section, header, footer, main {
     font-size: 1rem;
     font-family: "Inter", sans-serif;
 }
-.formCta__label-phone {
-}
 .formCta__input-phone {
     border: 1px solid #333;
     border-radius: 4px;
@@ -651,8 +649,6 @@ section, header, footer, main {
     width: 100%;
     font-size: 1rem;
     font-family: "Inter", sans-serif;
-}
-.formCta__label-service {
 }
 .formCta__select-service {
     border: 1px solid #333;
@@ -684,7 +680,8 @@ option {
     font-family: "Inter", sans-serif;
     font-weight: lighter;
 }
-.cta_btn {
+
+.submitBtn {
     border: none;
     width: 100%;
     padding: 12px 30px;
@@ -692,5 +689,12 @@ option {
     letter-spacing: 1px;
     font-weight: lighter;
 }
-.submitBtn {
+.success {
+    text-align: center;
+    opacity: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    transition: opacity 1s ease-out;
 }

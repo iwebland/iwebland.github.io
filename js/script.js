@@ -10,7 +10,10 @@ window.addEventListener('DOMContentLoaded', function() {
           imgs = document.querySelectorAll('.image'),
           descs = document.querySelectorAll('.desc'),
           nav = document.querySelector('.header__container'),
-          header = document.querySelector('.header');
+          header = document.querySelector('.header'),
+          showModals = document.querySelectorAll('.showModal'),
+          modal = document.querySelector('.modal'),
+          closeModal = document.querySelector('.closeModal');
     
     let currentIndex = 0;
 
@@ -94,8 +97,17 @@ window.addEventListener('DOMContentLoaded', function() {
                 header.style.padding = "20px 0";
             }
         });
-      }
-      document.getElementById('myForm').addEventListener('submit', function(event) {
+    }
+
+    
+    
+    //Telegram
+
+    const link = document.createElement('a');
+    link.textContent = 'Telegram'; // Текст ссылки
+    link.href = 'https://t.me/design_to_dev';
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
         // Получаем данные из формы
@@ -103,10 +115,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
         // Добавляем токен вашего бота и идентификатор чата
         formData.append('chat_id', '1709865539');
-        formData.append('text', 'New form submission:\n' +
-            'Name: ' + formData.get('name') + '\n' +
-            'Phone: ' + formData.get('phone') + '\n' +
-            'Message: ' + formData.get('message'));
+        formData.append('text', '====================\n\n' +
+            'Имя:  ' + formData.get('name') + '\n\n' +
+            'Телефон:  ' + formData.get('phone') + '\n\n' +
+            'Услуга:  ' + formData.get('service')+ '\n\n====================');
 
         // Отправляем запрос к Telegram Bot API с помощью Fetch API
         fetch('https://api.telegram.org/bot6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo/sendMessage', {
@@ -115,12 +127,53 @@ window.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            alert('Your message has been sent to Telegram!');
+            document.querySelector('.success').style.opacity = 1;
+            this.reset();
         })
-        .catch(error => console.error(error));
+        .catch(error => {
+            console.log(error);
+            
+            this.reset();
+            // Очищаем содержимое .success
+            const successElement = document.querySelector('.success');
+            successElement.innerHTML = '';
+    
+            // Добавляем ссылку к сообщению об ошибке
+            const errorMessage = document.createElement('span');
+            errorMessage.textContent = 'Произошла ошибка! Напишите мне в ';
+            successElement.appendChild(errorMessage);
+            successElement.appendChild(linkElement);
+        });
     });
 
-    //   6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo
-    //   1709865539
+
+    // Modal
+    function modalShow() {
+        modal.classList.add('modalOpen');
+        document.querySelector('body').style.overflow = "hidden"
+    }
+    function modalHide() {
+        modal.classList.remove('modalOpen');
+        document.querySelector('body').style.overflow = "";
+    }
+
+    showModals.forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+            const target = event.target;
+            if (target && target.classList.contains('showModal')) {
+                modalShow();
+            }
+        })
+    })
+
+    closeModal.addEventListener('click', event => {
+        event.preventDefault();
+        const target = event.target;
+        if (target == closeModal) {
+            modalHide();
+        }
+    })
+
+
 });
