@@ -23,6 +23,9 @@
     .case__img-view {
         height: 200px !important;
    }
+   .case__img-desc .desc {
+        font-size: 10px !important;
+   }
     .mouse {
         top: 100px;
    }
@@ -119,6 +122,11 @@
    }
     .case__img-desc {
         padding: 10px;
+        height: 100%;
+        overflow-y: auto;
+   }
+   .case__img-desc .desc {
+        font-size: 12px !important;
    }
     .case__img-btns {
         height: 30px;
