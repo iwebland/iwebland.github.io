@@ -95,4 +95,32 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
       }
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+        // Получаем данные из формы
+        const formData = new FormData(this);
+
+        // Добавляем токен вашего бота и идентификатор чата
+        formData.append('chat_id', '1709865539');
+        formData.append('text', 'New form submission:\n' +
+            'Name: ' + formData.get('name') + '\n' +
+            'Phone: ' + formData.get('phone') + '\n' +
+            'Message: ' + formData.get('message'));
+
+        // Отправляем запрос к Telegram Bot API с помощью Fetch API
+        fetch('https://api.telegram.org/6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo/sendMessage', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            alert('Your message has been sent to Telegram!');
+        })
+        .catch(error => console.error(error));
+    });
+
+    //   6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo
+    //   1709865539
 });

@@ -401,7 +401,39 @@
     </section>
 
     <footer>
-        
+        <div class="modal">
+            <div class="modal__form">
+                <h2 class="modal__form-title">Заполните форму</h2>
+                <form id="myForm" class="formCta">
+                    <div class="inputWrapper">
+                        <!-- <label for="name" class="formCta__label-name">Имя:</label> -->
+                        <input type="text" id="name" name="name" required class="formCta__input-name" placeholder="Введите имя">
+                    </div>
+                    <div class="inputWrapper">
+                        <!-- <label for="phone" class="formCta__label-phone">Телефон:</label> -->
+                        <input type="tel" id="phone" name="phone" required class="formCta__input-phone" placeholder="Введите номер телефона">
+                    </div>
+                    <div class="inputWrapper">
+                        <!-- <label for="service" class="formCta__label-service">Страна:</label> -->
+                        <select id="service" name="service" class="formCta__select-service" placeholder="Bvz">
+                            <option value="" disabled selected hidden class="optionHidden">Выберите услугу</option>
+                            <option value="Создать сайт" class="formCta__option-service">Создать сайт</option>
+                            <option value="Веб-дизайн" class="formCta__option-service">Веб-дизайн</option>
+                            <option value="Интернет-магазин" class="formCta__option-service">Интернет-магазин</option>
+                            <option value="Поддержка сайта" class="formCta__option-service">Поддержка сайта</option>
+                            <option value="Контекстная реклама" class="formCta__option-service">Контекстная реклама</option>
+                            <option value="SEO продвижение" class="formCta__option-service">SEO продвижение</option>
+                        </select>
+                    </div>
+                    <div class="inputWrapperLast">
+                        <input type="checkbox" id="agree" name="agree" class="form-checkbox" required checked>
+                        <label for="agree" class="form-checkbox-label">Я согласен на обработку персональных данных</label>
+                    </div>
+
+                    <input type="submit" value="Отправить" class="cta_btn submitBtn">
+                </form>
+            </div>
+        </div>
     </footer>
     
     <script src="js/script.js"></script>
