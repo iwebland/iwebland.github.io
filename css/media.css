@@ -70,6 +70,10 @@
         grid-row-start: 2;
         height: 300px;
    }
+   .case__img-desc {
+        height: 200px;
+        overflow-y: auto;
+   }
     .case__img-btns {
         height: 50px !important;
    }
