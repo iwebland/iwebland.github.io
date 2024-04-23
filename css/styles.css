@@ -558,7 +558,9 @@ section, header, footer, main {
     background: url(../icons/close.png) center center/cover no-repeat;
 }
 .modal__form-title {
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
+    margin-bottom: 10px;
 
 }
 .formCta {
