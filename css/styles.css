@@ -1,40 +1,5 @@
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Regular.woff2') format('woff2');
-    font-weight: 400; /* Обычный вес шрифта */
-}
 
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Medium.woff2') format('woff2');
-    font-weight: 500; /* Обычный вес шрифта */
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Light.woff2') format('woff2');
-    font-weight: 300; /* Обычный вес шрифта */
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Medium.ttf') format('woff2');
-    font-weight: 500; /* Обычный вес шрифта */
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
-    font-weight: 400; /* Обычный вес шрифта */
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
-    font-weight: 600; /* Обычный вес шрифта */
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Black.woff2') format('woff2');
-    font-weight: 900; /* Обычный вес шрифта */
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt@-10..0&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
