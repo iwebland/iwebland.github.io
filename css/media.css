@@ -126,7 +126,7 @@
         overflow-y: auto;
    }
    .case__img-desc .desc {
-        font-size: 12px !important;
+        font-size: 12px;
    }
     .case__img-btns {
         height: 30px;
