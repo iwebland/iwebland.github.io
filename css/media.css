@@ -58,7 +58,7 @@
    }
     .case__tabs {
         display: grid;
-        grid-template-columns: 70% 70% 70% 70%;
+        grid-template-columns: 60% 60% 60% 60%;
         overflow-x: scroll;
    }
     .case__img-item {
@@ -104,7 +104,7 @@
         font-size: 3rem;
    }
     .main__desc {
-        font-size: 2rem;
+        font-size: 1.5rem;
    }
     .case__tabs-item {
         width: 100%;
@@ -125,7 +125,7 @@
         font-size: 8px;
    }
     .service__items {
-        grid-template-columns: 75% 75% 75% 75%;
+        grid-template-columns: 75% 75% 75% 75% 75% 75%;
         overflow-x: scroll;
         gap: 10px;
    }
@@ -143,6 +143,6 @@
         font-size: 3rem;
    }
     .main__desc {
-        font-size: 2rem;
+        font-size: 1.5rem;
    }
 }
