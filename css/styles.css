@@ -83,6 +83,9 @@ section, header, footer, main {
     justify-content: space-between;
 }
 .logo {
+    font-family: Montserrat;
+    font-weight: 900;
+    line-height: normal;
     font-size: 1.4rem;
     text-transform: uppercase;
     background: -webkit-linear-gradient(-90deg, rgba(235, 27, 36, 1) 0%, rgba(83, 12, 15, 1) 100%);
@@ -253,7 +256,7 @@ section, header, footer, main {
 .case__img-desc .desc {
     display: none;
     color: #eee;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
