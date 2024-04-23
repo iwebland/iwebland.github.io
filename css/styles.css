@@ -1,52 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,600;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-.roboto-light {
-font-family: "Roboto", sans-serif;
-font-weight: 300;
-font-style: normal;
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 400; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
 
-.roboto-regular {
-font-family: "Roboto", sans-serif;
-font-weight: 400;
-font-style: normal;
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2');
+    font-weight: 500; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
 
-.roboto-medium {
-font-family: "Roboto", sans-serif;
-font-weight: 500;
-font-style: normal;
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2');
+    font-weight: 300; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
-
-.roboto-bold {
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('woff2');
+    font-weight: 500; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
-
-.roboto-black {
-font-family: "Roboto", sans-serif;
-font-weight: 900;
-font-style: normal;
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
-
-.montserrat-black {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: Black;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
-.montserrat-bold {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: Bold;
-}
-.montserrat-semi {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: SemiBold;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2');
+    font-weight: 900; /* Обычный вес шрифта */
+    font-style: normal; /* Обычный стиль шрифта */
 }
 
 * {
