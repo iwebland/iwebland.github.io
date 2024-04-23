@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', function() {
             'Message: ' + formData.get('message'));
 
         // Отправляем запрос к Telegram Bot API с помощью Fetch API
-        fetch('https://api.telegram.org/6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo/sendMessage', {
+        fetch('https://api.telegram.org/bot6752478668:AAGgHZCv5Ve6VptKCt3Mcod74XcfAWmbBQo/sendMessage', {
             method: 'POST',
             body: formData
         })
