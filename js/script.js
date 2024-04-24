@@ -44,6 +44,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
     hideTabs();
     showTabs();
+
+    function scrollTopImgs() {
+        imgs.forEach(item => {
+            item.scrollTo({top: 0});
+        })
+    }
  
     nextButtons.forEach(item => {
         item.addEventListener('click', (event) => {
@@ -53,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function() {
             currentIndex = (currentIndex + 1) % (arrImgs1.length - 1);
             [...arrImgs1].forEach(img => {
                 img.classList.remove('showImg');
-                img.scrollTo({top: 0});
+                scrollTopImgs();
             }); 
             arrImgs1[currentIndex].classList.add('showImg');
             [...arrDesc1].forEach(desc => {
@@ -73,7 +79,7 @@ window.addEventListener('DOMContentLoaded', function() {
             currentIndex = (currentIndex - 1 + (arrImgs2.length - 1)) % (arrImgs2.length - 1);
             [...arrImgs2].forEach(img => {
                 img.classList.remove('showImg');
-                img.scrollTo({top: 0});
+                scrollTopImgs();
             });  
             arrImgs2[currentIndex].classList.add('showImg');
             [...arrDesc2].forEach(desc => {
@@ -87,8 +93,6 @@ window.addEventListener('DOMContentLoaded', function() {
     
     parentTabs.addEventListener('click', event => {
         const target = event.target;
-        event.preventDefault();
-
         if (target && target.classList.contains('case__tabs-item')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
