@@ -117,9 +117,6 @@ window.addEventListener('DOMContentLoaded', function() {
     
     //Telegram
 
-    const link = document.createElement('a');
-    link.textContent = 'Telegram'; // Текст ссылки
-    link.href = 'https://t.me/design_to_dev';
 
     document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Предотвращаем отправку формы по умолчанию
@@ -150,15 +147,19 @@ window.addEventListener('DOMContentLoaded', function() {
             console.log(error);
             
             this.reset();
-            // Очищаем содержимое .success
+
             const successElement = document.querySelector('.success');
             successElement.innerHTML = '';
     
-            // Добавляем ссылку к сообщению об ошибке
+            const link = document.createElement('a');
+            link.textContent = 'Telegram'; 
+            link.href = 'https://t.me/design_to_dev';
+
             const errorMessage = document.createElement('span');
-            errorMessage.textContent = 'Произошла ошибка! Напишите мне в ';
+            errorMessage.textContent = `Произошла ошибка! Напишите мне в `;
             successElement.appendChild(errorMessage);
-            successElement.appendChild(linkElement);
+            successElement.appendChild(link);
+            document.querySelector('.success').style.opacity = 1;
         });
     });
 
