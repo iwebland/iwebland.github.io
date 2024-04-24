@@ -51,9 +51,15 @@ window.addEventListener('DOMContentLoaded', function() {
             const arrImgs1 = target.parentElement.previousElementSibling.children;
             const arrDesc1 = target.parentElement.previousElementSibling.previousElementSibling.children;
             currentIndex = (currentIndex + 1) % (arrImgs1.length - 1);
-            [...arrImgs1].forEach(img => img.classList.remove('showImg')); 
+            [...arrImgs1].forEach(img => {
+                img.classList.remove('showImg');
+                img.scrollTo({top: 0});
+            }); 
             arrImgs1[currentIndex].classList.add('showImg');
-            [...arrDesc1].forEach(desc => desc.classList.remove('show')); 
+            [...arrDesc1].forEach(desc => {
+                desc.classList.remove('show');
+                desc.scrollTo({top: 0});
+            }); 
             arrDesc1[currentIndex].classList.add('show');
     
         })
@@ -65,9 +71,15 @@ window.addEventListener('DOMContentLoaded', function() {
             const arrImgs2 = target.parentElement.previousElementSibling.children;
             const arrDesc2 = target.parentElement.previousElementSibling.previousElementSibling.children;
             currentIndex = (currentIndex - 1 + (arrImgs2.length - 1)) % (arrImgs2.length - 1);
-            [...arrImgs2].forEach(img => img.classList.remove('showImg')); 
+            [...arrImgs2].forEach(img => {
+                img.classList.remove('showImg');
+                img.scrollTo({top: 0});
+            });  
             arrImgs2[currentIndex].classList.add('showImg');
-            [...arrDesc2].forEach(desc => desc.classList.remove('show')); 
+            [...arrDesc2].forEach(desc => {
+                desc.classList.remove('show');
+                desc.scrollTo({top: 0});
+            }); 
             arrDesc2[currentIndex].classList.add('show');
     
         })
@@ -75,12 +87,14 @@ window.addEventListener('DOMContentLoaded', function() {
     
     parentTabs.addEventListener('click', event => {
         const target = event.target;
+        event.preventDefault();
 
         if (target && target.classList.contains('case__tabs-item')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabs();
                     showTabs(i);
+                    item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                     hover.style.left = `${target.offsetLeft}px`;
                 }
             })
@@ -129,6 +143,8 @@ window.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.querySelector('.success').style.opacity = 1;
             this.reset();
+            setTimeout(modalHide, 3000);
+            
         })
         .catch(error => {
             console.log(error);

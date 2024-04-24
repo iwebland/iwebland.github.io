@@ -81,7 +81,7 @@
         height: 300px;
    }
    .case__img-desc {
-        height: 200px;
+        height: 150px !important;
         overflow-y: auto;
    }
     .case__img-btns {
