@@ -429,10 +429,7 @@
                         <input type="text" id="name" name="name" required class="formCta__input-name" placeholder="Введите имя">
                     </div>
                     <div class="inputWrapper">
-                        <input type="tel" id="phone" name="phone" required class="formCta__input-phone" placeholder="Введите номер телефона">
-                    </div>
-                    <div class="inputWrapper">
-                        <select id="service" name="service" class="formCta__select-service" placeholder="Bvz">
+                        <select id="service" name="service" class="formCta__select-service">
                             <option value="" disabled selected hidden class="optionHidden">Выберите услугу</option>
                             <option value="Создать сайт" class="formCta__option-service">Создать сайт</option>
                             <option value="Веб-дизайн" class="formCta__option-service">Веб-дизайн</option>
@@ -441,6 +438,17 @@
                             <option value="Контекстная реклама" class="formCta__option-service">Контекстная реклама</option>
                             <option value="SEO продвижение" class="formCta__option-service">SEO продвижение</option>
                         </select>
+                    </div>
+                    <div class="inputWrapper">
+                        <select id="contact" name="contact" class="formCta__select-contact">
+                            <option value="" disabled selected hidden class="optionHidden">Способ связи</option>
+                            <option value="Звонок" class="formCta__option-service">Звонок</option>
+                            <option value="WhatsApp" class="formCta__option-service">WhatsApp</option>
+                            <option value="Telegram" class="formCta__option-service">Telegram</option>
+                        </select>
+                    </div>
+                    <div class="inputWrapper">
+                        <input type="tel" id="phone" name="phone" required class="formCta__input-phone" placeholder="Никнейм/номер телефона">
                     </div>
                     <div class="inputWrapperLast">
                         <input type="checkbox" id="agree" name="agree" class="form-checkbox" required checked>

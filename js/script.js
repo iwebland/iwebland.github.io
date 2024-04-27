@@ -133,6 +133,7 @@ window.addEventListener('DOMContentLoaded', function() {
         formData.append('text', '====================\n\n' +
             'Имя:  ' + formData.get('name') + '\n\n' +
             'Телефон:  ' + formData.get('phone') + '\n\n' +
+            'Связь:  ' + formData.get('contact') + '\n\n' +
             'Услуга:  ' + formData.get('service')+ '\n\n====================');
 
         // Отправляем запрос к Telegram Bot API с помощью Fetch API

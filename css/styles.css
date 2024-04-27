@@ -619,7 +619,7 @@ section, header, footer, main {
     font-size: 1rem;
     font-family: "Inter", sans-serif;
 }
-.formCta__select-service {
+.formCta__select-service, .formCta__select-contact {
     border: 1px solid #333;
     border-radius: 4px;
     padding: 0 10px;
