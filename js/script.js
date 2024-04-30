@@ -1,4 +1,18 @@
 'use strict'
+window.onload = function() {
+    var preloader = document.getElementById('preloader');
+    var content = document.getElementById('content');
+
+    // Устанавливаем контент видимым, но полностью прозрачным
+    content.style.display = 'block';
+
+    // Скрываем прелоадер и плавно отображаем контент
+    setTimeout(function() {
+        preloader.style.display = 'none';
+        content.style.opacity = 1; // Плавное изменение прозрачности до полной видимости
+    }, 100); // Можно установить задержку в зависимости от эффекта, который вы хотите достичь
+};
+
 window.addEventListener('DOMContentLoaded', function() {
     
     const tabs = document.querySelectorAll('.case__tabs-item'),

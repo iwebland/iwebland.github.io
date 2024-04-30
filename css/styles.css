@@ -1,3 +1,22 @@
+#preloader {
+    position: fixed;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#content {
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-out; /* Плавное изменение прозрачности */
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt@-10..0&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap');
 
