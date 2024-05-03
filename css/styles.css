@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt@-10..0&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap');
+
 #preloader {
     position: fixed;
     font-size: 30px;
@@ -18,7 +20,6 @@
     transition: opacity .5s ease-out; /* Плавное изменение прозрачности */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:slnt@-10..0&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
